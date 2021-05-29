@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import "normalize";
+
+$primary-font: "Roboto", sans-serif;
+
+body {
+  font-family: $primary-font;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+    align-items: center;
+    max-width: 70%;
+  }
+
+  &--spaceBetween {
+    justify-content: space-between;
+  }
+
+  &--alignFlexStart {
+    align-items: flex-start;
+  }
+}
+
+.header {
+  background-color: #fff;
+
+  &__title {
+    font-size: 38px;
+    font-weight: 400;
+  }
+
+  &__searchBar {
+    margin-bottom: 20px;
+
+    @media (min-width: 750px) {
+      margin-bottom: 0;
+    }
+
+    form {
+      display: flex;
+    }
+
+    input[type="search"] {
+      border: 1px solid #8fbfd5;
+      font-size: 18px;
+      padding: 3px 7px;
+      flex-grow: 1;
+    }
+
+    input[type="submit"] {
+      border: 0;
+      font-size: 18px;
+      color: #fff;
+      background-color: #8fbfd5;
+      padding: 4px 10px;
+    }
+  }
+}
+
+.searchResults {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &__title {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  &__results {
+    background-color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: 750px) {
+      width: 65%;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f8f8;
+      margin-bottom: 10px;
+
+      @media (min-width: 750px) {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        padding: 10px 10px 0 10px;
+        font-size: 14px;
+
+        @media (min-width: 750px) {
+          text-align: center;
+          padding: 10px;
+          max-width: 60px;
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 0 10px 10px 10px;
+        font-size: 16px;
+
+        @media (min-width: 750px) {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  &__filter {
+    padding: 10px 15px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: 750px) {
+      width: 35%;
+      margin-left: 20px;
+    }
+
+    &__category {
+      div {
+        margin-top: 18px;
+        margin-bottom: 15px;
+        font-size: 14px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #31426b;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 12px;
+}
