@@ -6,7 +6,7 @@ You can see the page live at https://rjamati.github.io/See-Tickets-HTML-CSS-SCSS
 # Preparing the Project
 I started off by creating the index.html file and also installed SCSS into the project.
 
-I used SCSS/SASS for this projec because it will allow me to write and manage my CSS quickly and efficiently.
+I used SCSS/SASS for this project because it will allow me to write and manage my CSS quickly and efficiently.
 
 # HTML
 First I created the HTML for the entire page.
